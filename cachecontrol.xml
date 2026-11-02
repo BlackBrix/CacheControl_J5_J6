@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_CACHECONTROL</name>
+    <version>5.0.3</version>
+    <creationDate>November 2026</creationDate>
+    <author>Cache Control contributors</author>
+    <copyright>Original plugin by Crosstec GmbH; Joomla 4 port by SharkyKZ; modernization 2026</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <description>PLG_SYSTEM_CACHECONTROL_XML_DESCRIPTION</description>
+    <namespace path="src">BlackBrix\Plugin\System\CacheControl</namespace>
+    <files>
+        <folder plugin="cachecontrol">services</folder>
+        <folder>src</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/plg_system_cachecontrol.ini</language>
+        <language tag="en-GB">language/en-GB/plg_system_cachecontrol.sys.ini</language>
+        <language tag="de-DE">language/de-DE/plg_system_cachecontrol.ini</language>
+        <language tag="de-DE">language/de-DE/plg_system_cachecontrol.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="definitions" type="textarea" cols="70" rows="16" filter="raw" label="PLG_SYSTEM_CACHECONTROL_CONFIG_DEFINITIONS_LABEL" description="PLG_SYSTEM_CACHECONTROL_CONFIG_DEFINITIONS_DESCRIPTION" />
+                <field name="reenable_afterdispatch" type="radio" layout="joomla.form.field.radio.switcher" default="0" label="PLG_SYSTEM_CACHECONTROL_CONFIG_REENABLE_AFTERDISPATCH_LABEL" description="PLG_SYSTEM_CACHECONTROL_CONFIG_REENABLE_AFTERDISPATCH_DESCRIPTION">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="debug_logging" type="radio" layout="joomla.form.field.radio.switcher" default="0" label="PLG_SYSTEM_CACHECONTROL_CONFIG_DEBUG_LABEL" description="PLG_SYSTEM_CACHECONTROL_CONFIG_DEBUG_DESCRIPTION">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
